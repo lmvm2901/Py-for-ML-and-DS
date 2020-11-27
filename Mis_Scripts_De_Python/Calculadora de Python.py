@@ -23,4 +23,8 @@ button2 = tk.Button(frame,
                     command=write_slogan)
 button2.grid(row=3, column=1)
 
+
+
+
+
 root.mainloop()
