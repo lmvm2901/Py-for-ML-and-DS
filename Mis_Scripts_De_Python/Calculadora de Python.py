@@ -11,18 +11,16 @@ root.geometry("400x400")
 frame = tk.Frame(root)
 frame.pack()
 
+button1 = tk.Button(frame,
+                    text="1",
+                    fg="red",
+                    command=quit,
+                    )
+button1.grid(row=2, column=0)
 
-button = tk.Button(frame,
-                   text="QUIT",
-                   fg="red",
-                   command=quit,
-                   )
-button.grid(row=2, column=0)
-
-
-slogan = tk.Button(frame,
-                   text="Hello",
-                   command=write_slogan)
-slogan.grid(row=2, column=1)
+button2 = tk.Button(frame,
+                    text="2",
+                    command=write_slogan)
+button2.grid(row=3, column=1)
 
 root.mainloop()
