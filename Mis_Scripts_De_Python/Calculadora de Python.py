@@ -73,7 +73,7 @@ button9 = tk.Button(frame, text="9", command=lambda: press(9), height=1, width=7
 button9.grid(row=2, column=2)
 
 btnclear = tk.Button(frame, text="clear", command=lambda: limpiar(), height=1, width=7)
-btnclear.grid(row=5, columnspan=3)
+btnclear.grid(row=5, column=2)
 
 btnsumar = tk.Button(frame, text="+", command=lambda: press("+"), height=1, width=7)
 btnsumar.grid(row=3, column=2)
@@ -89,6 +89,12 @@ btndivis.grid(row=4, column=2)
 
 btnigual = tk.Button(frame, text="=", command=lambda: calculartodo(), height=1, width=7)
 btnigual.grid(row=3, column=1)
+
+btnparenizq = tk.Button(frame, text="(", command=lambda: press("("), height=1, width=7)
+btnparenizq.grid(row=5, column=0)
+
+btnparender = tk.Button(frame, text=")", command=lambda: press(")"), height=1, width=7)
+btnparender.grid(row=5, column=1)
 
 # Corriendo el programa para que no se cierre
 root.mainloop()
