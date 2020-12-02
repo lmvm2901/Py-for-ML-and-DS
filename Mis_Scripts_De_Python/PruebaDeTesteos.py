@@ -1,4 +1,7 @@
 import pytest
+import torch
+
+torch.cuda.is_available()
 
 
 class TestClass:
