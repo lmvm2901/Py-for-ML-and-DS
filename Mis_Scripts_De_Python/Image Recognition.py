@@ -3,7 +3,8 @@ from torchvision import transforms
 from PIL import Image
 import torch
 
-img = Image.open("C:/Users/Lmvm_/Desktop/Carpeta/Coursera/Imagenes_para_Vision/bobby.jpg")
+img = Image.open("C:/Users/Lmvm_/Desktop/Carpeta/Coursera/Py for ML and Data "
+                 "Science/Mis_Scripts_De_Python/Imagenes/bobby.jpg")
 dir(models)
 
 alexnet = models.AlexNet()
@@ -33,4 +34,7 @@ _, index = torch.max(out, 1)
 
 percentage = torch.nn.functional.softmax(out, dim=1)[0] * 100
 print(labels[index[0]], percentage[index[0]].item())
-print(percentage)
+
+
+_, indices = torch.sort(out, descending=True)
+print([(labels[idx], percentage[idx].item()) for idx in indices[0][:5]])
